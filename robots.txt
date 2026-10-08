@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://viatrulife.com/sitemap.xml
