@@ -6,12 +6,12 @@
   <meta name="description" content="VIATRU is a South Korean lifestyle and e-commerce business bringing product research, considered sourcing and practical seller applications together.">
   <meta name="theme-color" content="#142721">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="VIATRU — Commerce & Software">
+  <meta property="og:title" content="VIATRU — Products & Software">
   <meta property="og:description" content="Everyday living, active life and personal essentials. Product research and practical commerce applications from South Korea.">
   <meta property="og:url" content="https://viatrulife.com/">
   <link rel="canonical" href="https://viatrulife.com/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23142721'/%3E%3Cpath d='M16 18L32 47L48 18' fill='none' stroke='%23ded3bc' stroke-width='5'/%3E%3C/svg%3E">
-  <title>VIATRU — Commerce &amp; Software</title>
+  <title>VIATRU — Products &amp; Software</title>
   <style>
     :root{--forest:#142721;--forest-deep:#10201b;--ivory:#f2efe7;--white:#faf8f2;--gold:#c4a777;--muted:#b8c0b7;--ink:#202c26;--gray:#566058;--dark-rule:#405249;--light-rule:#cdcfc3;--max:1320px}
     *{box-sizing:border-box}
@@ -33,9 +33,13 @@
     .hero{padding-block:77px 39px}
     .hero-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:53px;color:var(--muted)}
     .hero-top .location{letter-spacing:.03em;font-size:12px}
-    .hero h1{font-weight:400;font-size:clamp(64px,7.4vw,112px);letter-spacing:-.062em;line-height:1.05}
-    .hero h1 .serif{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.06em}
-    .hero h1 .sans{display:block;color:var(--gold);font-weight:400;letter-spacing:-.065em;margin-top:4px}
+    .hero-main{display:grid;grid-template-columns:1.05fr 1fr;gap:68px;align-items:center}
+    .hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(52px,5.8vw,84px);letter-spacing:-.055em;line-height:1.06;max-width:11ch}
+    .hero h1 em{color:var(--gold);font-weight:400}
+    .hero-intro{font-size:17px;line-height:1.75;color:var(--muted);max-width:40ch;margin-top:29px}
+    .hero-art{margin:0}
+    .hero-art img{display:block;width:100%;height:auto;border:1px solid var(--dark-rule)}
+    .hero-art figcaption{border-bottom:1px solid var(--dark-rule);padding-block:19px 20px;font-family:Georgia,'Times New Roman',serif;font-size:23px;line-height:1.35;letter-spacing:-.025em;color:var(--ivory)}
     .hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:54px;padding-top:27px;border-top:1px solid var(--dark-rule)}
     .hero-description{font-size:18px;line-height:1.75;max-width:52ch;color:var(--muted)}
     .hero-index{display:flex;flex-direction:column;align-items:flex-start;gap:13px;padding-top:4px}
@@ -92,6 +96,7 @@
     .contact-section{padding-block:71px 76px;background:var(--white)}
     .contact-top{display:flex;justify-content:space-between;align-items:flex-start;gap:60px}
     .contact-top .small-type{color:var(--gray);padding-top:8px}
+    .contact-heading .small-type{margin-bottom:19px}
     .contact-copy{max-width:48ch;font-size:15px;color:var(--gray)}
     .contact-email{display:inline-block;font-size:clamp(27px,4.3vw,62px);font-weight:400;line-height:1.3;letter-spacing:-.05em;text-decoration:none;overflow-wrap:anywhere;max-width:100%;margin-top:30px;border-bottom:1px solid var(--light-rule);padding-bottom:7px}
     .contact-email:hover{border-color:var(--ink)}
@@ -103,7 +108,7 @@
     .footer-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:23px}
     .legal{font-size:12px;line-height:1.9;color:var(--muted);margin:0}
     .copyright{font-size:11px;color:var(--muted);white-space:nowrap}
-    @media(min-width:1600px){.hero{padding-top:91px}.hero h1{font-size:122px}}
+    @media(min-width:1600px){.hero{padding-top:91px}.hero h1{font-size:88px}}
     @media(max-width:1000px){.wrap{width:calc(100% - 64px)}.hero{padding-top:55px}.hero-top{margin-bottom:42px}.hero-bottom{gap:44px}.hero-description{font-size:16px}.section-intro,.about-header,.focus-section{grid-template-columns:.3fr 1fr;gap:32px}.work-row{grid-template-columns:.08fr .42fr .5fr;gap:25px}.work-title h3{font-size:24px}.about-content{gap:48px}.about-statement{font-size:25px}.focus-content{font-size:21px;justify-content:flex-start;gap:12px 24px}.work-section,.about-section{padding-block:72px}.roadmap{gap:34px}}
     @media(max-width:700px){
       .wrap{width:calc(100% - 40px)}
@@ -113,8 +118,10 @@
       .hero{padding-block:39px 30px}
       .hero-top{margin-bottom:35px;align-items:flex-start;gap:20px}
       .hero-top .location{font-size:11px}.small-type{font-size:10px}
-      .hero h1{font-size:clamp(49px,9.8vw,69px);line-height:1.08;letter-spacing:-.055em}
-      .hero h1 .sans{letter-spacing:-.06em}
+      .hero-main{grid-template-columns:1fr;gap:33px}
+      .hero h1{font-size:clamp(49px,10.5vw,72px);line-height:1.08;letter-spacing:-.055em;max-width:13ch}
+      .hero-intro{font-size:16px;margin-top:24px;max-width:45ch}
+      .hero-art figcaption{font-size:21px;padding-block:15px 18px}
       .hero-bottom{grid-template-columns:1fr;gap:30px;margin-top:35px;padding-top:24px}
       .hero-description{font-size:16px;max-width:52ch}
       .hero-index{gap:11px;padding-top:0}.hero-index a{max-width:none}
@@ -160,7 +167,7 @@
       .footer-bottom{align-items:flex-start;flex-direction:column;gap:20px;margin-top:20px}
       .copyright{font-size:10px}.legal{font-size:11px}
     }
-    @media(min-width:701px) and (max-width:1000px){.product-layout{gap:48px}.product-section{padding-block:62px}.selection-section{padding-block:62px}.criteria-list{margin-left:calc(23.08% + 24px)}.criteria-list>div{gap:24px}}
+    @media(min-width:701px) and (max-width:1000px){.hero-main{gap:35px}.hero h1{font-size:clamp(46px,6.2vw,64px)}.hero-intro{font-size:15px}.hero-art figcaption{font-size:20px}.product-layout{gap:48px}.product-section{padding-block:62px}.selection-section{padding-block:62px}.criteria-list{margin-left:calc(23.08% + 24px)}.criteria-list>div{gap:24px}}
     @media(max-width:370px){.wrap{width:calc(100% - 32px)}.nav{gap:12px}.nav a{font-size:11px}.hero-top{flex-direction:column;gap:8px}.hero h1{font-size:45px}.contact-email{font-size:24px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
@@ -182,12 +189,18 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-top">
-        <p class="small-type">Commerce &amp; software</p>
+        <p class="small-type">A thoughtful way to live</p>
         <p class="location">Based in South Korea · Est. 2026</p>
       </div>
-      <h1 id="hero-title"><span class="serif">Product thinking.</span><span class="sans">Practical software.</span></h1>
+      <div class="hero-main">
+        <div class="hero-copy">
+          <h1 id="hero-title">Thoughtful essentials.<br>For the way you <em>live.</em></h1>
+          <p class="hero-intro">A practical perspective on the things that make everyday life feel a little easier — at home, on the move, and in between.</p>
+        </div>
+        <figure class="hero-art"><img src="lifestyle.png" width="1536" height="1024" fetchpriority="high" decoding="async" alt="An editorial still life with folded fabric, a plain water bottle, and an exercise mat in a sunlit room."><figcaption>Room for the everyday.<br>Space for what comes next.</figcaption></figure>
+      </div>
       <div class="hero-bottom">
-        <p class="hero-description">VIATRU brings product research and commerce software together. Our interests span everyday living, active life and personal essentials. The work of finding and comparing products also informs the applications we develop for online sellers.</p>
+        <p class="hero-description">VIATRU brings product research and commerce software together. Our interests span everyday living, active life and personal essentials. Finding products, comparing suppliers and understanding customer feedback inform both our sourcing decisions and the applications we develop for online sellers.</p>
         <div class="hero-index" aria-label="Explore our work">
           <a href="#world"><span>01 / Products</span><span>Our areas of interest &rarr;</span></a>
           <a href="#approach"><span>02 / Selection</span><span>How we approach research &rarr;</span></a>
@@ -200,8 +213,8 @@
       <div class="product-layout">
         <div class="product-heading">
           <p class="small-type">01 / Our world</p>
-          <h2 id="world-title">Everyday life,<br>closely considered.</h2>
-          <p>We look at the spaces people live in, the activities they enjoy and the routines that make a day their own. Across these areas, our research starts with a practical question: what makes a product useful?</p>
+          <h2 id="world-title">Life moves.<br>So do we.</h2>
+          <p>Our interests connect the spaces we live in, the activities we enjoy and the routines that make a day our own. Across these areas, our research starts with a practical question: what makes a product useful?</p>
         </div>
         <div class="product-list">
           <article class="product-row"><h3>Everyday living</h3><p>Goods for the familiar parts of life, from organizing a space to making daily tasks easier. We look for a clear purpose, straightforward use and details that fit ordinary homes and habits.</p></article>
@@ -215,7 +228,7 @@
       <section class="selection-section wrap" id="approach" aria-labelledby="approach-title">
         <div class="section-intro">
           <p class="small-type">02 / Our approach</p>
-          <div><h2 id="approach-title">The details<br>behind a choice.</h2><p class="intro-copy">Product research starts with understanding a need. We explore the options, compare the information behind them and keep the intended use in view throughout the sourcing process.</p></div>
+          <div><h2 id="approach-title">Considered.<br>From the start.</h2><p class="intro-copy">Product research starts with understanding a need. We explore the options, compare the information behind them and keep the intended use in view throughout the sourcing process.</p></div>
         </div>
         <dl class="criteria-list">
           <div><dt>Purpose first</dt><dd>We ask what a product is meant to do, who it is for and how it fits into everyday use. A clear need provides a useful starting point for comparing alternatives.</dd></div>
@@ -267,7 +280,7 @@
     <section class="about-section wrap" id="about" aria-labelledby="about-title">
       <div class="about-header">
         <p class="small-type">04 / The company</p>
-        <h2 id="about-title">Commerce informs<br>what we build.</h2>
+        <h2 id="about-title">A grounded perspective.<br>An open horizon.</h2>
       </div>
       <div class="about-content">
         <p class="about-statement">Product research involves comparing information scattered across listings, supplier responses and customer reviews. We develop software to bring more structure to that work.</p>
@@ -285,7 +298,7 @@
     <div class="light contact-section">
       <section class="wrap" id="contact" aria-labelledby="contact-title">
         <div class="contact-top">
-          <h2 class="small-type" id="contact-title">05 / Contact</h2>
+          <div class="contact-heading"><p class="small-type">05 / Contact</p><h2 id="contact-title">A conversation<br>starts here.</h2></div>
           <p class="contact-copy">For company inquiries, supplier introductions or conversations about our applications, contact VIATRU by email.</p>
         </div>
         <a class="contact-email" href="mailto:admin@viatrulife.com">admin@viatrulife.com</a>
